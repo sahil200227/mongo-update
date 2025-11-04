@@ -5,6 +5,10 @@ import os, datetime
 
 app = Flask(__name__)
 
+@app.route("/", methods=["GET"])
+def home():
+    return "🚀 Flask Mongo Update API is running!"
+
 @app.route("/api/update", methods=["POST"])
 def update_record():
     try:
